@@ -1,0 +1,88 @@
+<html>
+    <head>
+    <link rel="icon" href="./icon.jfif">
+    <style>
+        .header{
+            color: blue;
+        }
+        .border{
+            width: 600;
+            height: 600;
+            margin-top: 70px;
+            border-style:hidden;
+            border-radius: 2cm;
+            background-color:whitesmoke;
+            box-shadow: 1px 2px 11px 11px ;
+            
+        
+        }
+        body{
+            background-image: url(./i3.jfif.crdownload);
+        }
+        .button{
+            background-color: rgb(67, 67, 211);
+            width: 350;
+            padding: 8px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <center>
+        <div class="Border">
+            <br><br>
+        <div class="header">   
+        <h2 >Simple Interest Calculator</h2>
+        <br><br>
+        </div> 
+        <form>
+            
+         <div>   
+        <label><b><i>Principal Amount (p)</i></b></label><br><br>
+        <input type="number" id="principal" min="100"  >
+    </div>
+   
+    <br>
+    <div>
+        <label><b><i>Number of Years (n)</i></b></label><br><br>
+        <input type="number" id="years" min="1">
+        
+        
+    </div><br>
+
+    <div>
+        <label><b><i>Rate of Interest % (r)</i></b></label><br><br>
+        <input type="number" id="rate" min="1">
+        
+
+        
+    </div><br><br>
+    <div>
+        <input type="button" onclick="calculate()" class="button" value="Calculate">
+        
+    </div>
+    <br><br>
+    <p><i>*Simple Interest = (P*N*R/100)</i></p>
+     </form>
+     <div id="result"></div>
+    </center>
+</div>
+
+<script>
+
+    function calculate() {
+        const principal = parseInt(document.getElementById('principal').value);
+        const years = parseInt(document.getElementById('years').value);
+        const rate = parseInt(document.getElementById('rate').value);
+
+        const SI= (principal*years*rate)/100;
+        document.getElementById('result').textContent = SI.toFixed(2);
+    }
+
+</script>
+</body>
+</html>
+</html>
